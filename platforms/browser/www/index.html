@@ -1,0 +1,200 @@
+
+<!DOCTYPE html>
+
+<html>
+    
+    <head>
+        
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta http-equiv="Content-Security-Policy" content="default-src * gap: ws: https://ssl.gstatic.com;img-src * 'self' data: content:;style-src 'self' 'unsafe-inline' data: blob:;script-src * 'unsafe-inline' 'unsafe-eval' data: blob:;">
+
+        
+        <!-- Library -->
+        <script src="cordova.js"></script>
+        <link rel="stylesheet" href="lib/mobile.css">
+        <link rel="stylesheet" href="lib/theme.mobile.css">
+        <link rel="stylesheet" href="lib/orange.theme.mobile.css">
+        <script type="text/javascript" src="lib/jquery.js"></script>
+        <script type="text/javascript" src="lib/jquery.mobile.js"></script>
+        <link rel="stylesheet" href="src/app.css">
+        
+    </head>
+    
+    <body>
+        
+        <div data-role="page" id="home-page">
+            
+            <div data-role="content">
+                
+                <div id="home-content">
+                
+                    <div id="home-title">
+
+                        <h1> Stupid </h1>
+
+                    </div>
+
+                    <div id="home-buttons">
+
+                        <a data-role="button" href="#login-page"> Войти с ноги </a>
+                        <p> или </p>
+                        <a data-role="button" href="#register-page"> Впиться во вписку </a>
+
+                    </div>
+                
+                </div>
+                
+            </div>
+            
+        </div>
+        
+        <duv data-role="page" id="main-page">
+            
+            <div data-role="header" data-position="fixed">
+            
+                <h1 id="header-text"> Переписки </h1>
+            
+            </div>
+            
+            <div data-role="content" id="content-messages" data-position="fixed">
+
+                <a data-role="button" id="open-token"> Показать токен </a>
+                <a data-role="button" id="quit-button"> Выйти </a>
+
+            </div>
+
+            <div data-role="content" id="content-friends" data-position="fixed">
+
+                <h1 style="color:#ff0000"> У тебя нет друзей </h1>
+
+            </div>
+
+            <div data-role="content" id="content-settings" data-position="fixed">
+
+                <p> Зачем тебе настройки, если есть котик? </p>
+
+                <img src="https://pp.userapi.com/c837325/v837325704/814a3/j7cFj3-ptpU.jpg" width="300">
+
+            </div>
+            
+            <div data-role="footer" data-position="fixed">
+            
+                <div data-role="navbar">
+                
+                    <ul>
+                        
+                        <li> <a id="button-messages"> <img src="assets/navbar/messages.svg"> </a> </li>
+                        <li> <a id="button-friends"> <img src="assets/navbar/friends.svg"> </a> </li>
+                        <li> <a id="button-settings"> <img src="assets/navbar/settings.svg"> </a> </li>
+                        
+                    </ul>
+                
+                </div>
+            
+            </div>
+            
+        </duv>
+        <div data-role="page" id="login-page">
+        
+            <!-- Матвей лох -->
+            
+            <div data-role="header">
+            
+                <h1> Вход </h1>
+                
+            </div>
+            
+            <div data-role="content">
+            
+                <p> Введи сюда это все, ладно? </p>
+                
+                <input type="text" id="login-username" placeholder="Имя пользователя">
+                <input type="password" id="login-password" placeholder="Пароль">
+                
+                <a data-role="button" id="login-button"> Вход </a>
+                
+            </div>
+    
+        </div>
+        
+        <div data-role="page" id="confirm-page">
+            
+            <div data-role="header">
+                
+                <h1> Подтверждение </h1>
+                
+            </div>
+            
+            <div data-role="content">
+                
+                <input type="text" id="confirm-code" placeholder="Код с почты">
+                
+                <a data-role="button" id="confirm-button"> Потвердить </a>
+                
+            </div>
+            
+        </div>
+        
+        <div data-role="page" id="register-page">
+        
+            <div data-role="header">
+            
+                <h1> Регистрация </h1>
+            
+            </div>
+            
+            <div data-role="content">
+            
+                <p> Введи сюда это все, ладно? </p>
+                
+                <input type="text" id="register-username" placeholder="Имя пользователя">
+                <input type="text" id="register-email" placeholder="E-Mail">
+                <input type="password" id="register-password" placeholder="Пароль">
+                <input type="password" id="register-enteredPassword" placeholder="Повтори-ка пароль">
+                
+                <a data-role="button" id="register-button"> Зарегаться </a>
+            
+            </div>
+            
+        </div>
+        
+        <!-- Settings -->
+        <script src="src/settings.js"></script>
+        
+        <!-- Auth -->
+        <script src="src/auth/register.js"></script>
+        <script src="src/auth/confirm.js"></script>
+        <script src="src/auth/login.js"></script>
+        
+        <!-- Auth interface -->
+        <script src="src/interface/auth/register.js"></script>
+        <script src="src/interface/auth/confirm.js"></script>
+        <script src="src/interface/auth/login.js"></script>
+        
+        <!-- App Interface -->
+        <script src="src/interface/app/messages.js"></script>
+        <script src="src/interface/app/friends.js"></script>
+        <script src="src/interface/app/settings.js"></script>
+        
+        <!-- Intefrace Object -->
+        <script src="src/interface.js"></script>
+        
+        <!-- Main -->
+        <script src="src/app.js"></script>
+        
+        <script>
+            
+            $(document).ready(function () {
+                
+                var app = new App();
+                
+                document.addEventListener("deviceready", app.onDeviceReady, false);
+                
+            });
+            
+        </script>
+        
+    </body>
+    
+</html>

@@ -1,0 +1,33 @@
+body {
+    background: linear-gradient(to bottom, #e5c500, #ff7300);
+}
+
+#home-page {
+    background: linear-gradient(to bottom, #e5c500, #ff7300);
+}
+
+#home-title, #home-buttons {
+    display: none;
+}
+
+#home-title h1 {
+    text-align: center;
+    color: #fff;
+}
+
+#home-buttons a {
+    background: #ffffff;
+}
+
+#homebuttons a {
+    background: #eeeeee;
+}
+
+#home-buttons p {
+    color: #fff;
+    text-align: center;
+}
+
+#content-messages, #content-friends, #content-settings {
+    display: none;
+}

@@ -1,0 +1,11 @@
+{
+  "background_color": "#FFF",
+  "display": "standalone",
+  "name": "Stupid",
+  "short_name": "Stupid",
+  "version": "com.tymm0.StupidMessenger",
+  "description": "Messenger for stupid actions! :D",
+  "author": "PhoneGap Team",
+  "icons": [],
+  "start_url": "index.html"
+}
